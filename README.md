@@ -4,8 +4,6 @@
 
 主要使用工具包含element-plus組件庫及axios請求工具等等
 
-線上演示地址(黑馬程序員架設): https://fe-bigevent-web.itheima.net/login
-
 # 大事件文章管理系統
 
 ###### 此項目為文章管理系統, 可以設置發布個人的文章供他人觀看, 類似個人部落格的概念
@@ -58,6 +56,7 @@ pnpm install
 # 運行專案
 pnpm dev
 ```
+###### 另有黑馬程序員機構所架設之線上演示地址: https://fe-bigevent-web.itheima.net/login
 
 ## 主要工具
 
