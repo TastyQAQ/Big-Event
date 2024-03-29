@@ -56,7 +56,6 @@ pnpm install
 # 運行專案
 pnpm dev
 ```
-###### 另有黑馬程序員機構所架設之線上演示地址: https://fe-bigevent-web.itheima.net/login
 
 ## 主要工具
 
