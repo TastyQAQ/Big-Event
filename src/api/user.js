@@ -1,9 +1,9 @@
 import request from '@/utils/request.js'
-export const userRegisterService = ({ username, password, repassword }) => {
-  return request.post('/api/reg', { username, password, repassword })
+export const userRegisterService = (data) => {
+  return request.post('/api/reg', data)
 }
-export const userLoginService = ({ username, password }) => {
-  return request.post('/api/login', { username, password })
+export const userLoginService = (data) => {
+  return request.post('/api/login', data)
 }
 export const userGetInfoService = () => {
   return request.get('/my/userinfo')

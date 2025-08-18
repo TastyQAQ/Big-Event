@@ -98,7 +98,7 @@ const login = async () => {
             type="password"
           ></el-input>
         </el-form-item>
-        <el-form-item prop="password">
+        <el-form-item prop="repassword">
           <el-input
             placeholder="請再次輸入密碼"
             :prefix-icon="Lock"
