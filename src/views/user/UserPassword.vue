@@ -19,14 +19,23 @@ const rules = ref({
   ],
   new_pwd: [
     { required: true, message: '請輸入密碼', trigger: 'blur' },
-    { pattern: /^\S{6,15}$/, message: '長度必須為6-15個字符', trigger: 'blur' }
+    { pattern: /^\S{6,15}$/, message: '長度必須為6-15個字符', trigger: 'blur' },
+    {
+      validaotr: (rule, value, callback) => {
+        if (value === formModel.value.old_pwd) {
+          callback(new Error('新密碼不得和舊密碼一樣'))
+        } else {
+          callback()
+        }
+      }
+    }
   ],
   re_pwd: [
     { required: true, message: '請再次輸入密碼', trigger: 'blur' },
     { pattern: /^\S{6,15}$/, message: '長度必須為6-15個字符', trigger: 'blur' },
     {
       validator: (rule, value, callback) => {
-        if (value !== formModel.value.re_pwd) {
+        if (value !== formModel.value.new_pwd) {
           callback(new Error('兩次輸入的密碼不一致')) // callback(new Error(錯誤提示))
         } else {
           callback() //校驗成功與否都要 callback 回調
